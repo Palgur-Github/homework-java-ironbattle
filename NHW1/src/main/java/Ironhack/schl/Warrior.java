@@ -13,7 +13,7 @@ public class Warrior extends Character implements Attacker {
     private int strength;
     private static final Random rand = new Random();
 
-    public Warrior(String name, int hp1, int i, int hp) {
+    public Warrior(String name, int hp, int stamina, int strength) {
         super(name, hp);
         this.stamina = stamina;
         this.strength = strength;

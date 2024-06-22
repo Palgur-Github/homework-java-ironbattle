@@ -1,6 +1,7 @@
 package Ironhack.schl;
 
 import java.io.*;
+import java.util.Random;
 import java.util.Scanner;
 
 public class BattleSimulator {
@@ -48,34 +49,22 @@ public class BattleSimulator {
         System.out.println("|-----------------------|");
         System.out.print("Enter warrior's name: ");
         String name = scanner.next();
-        System.out.println("|-----------------------|");
-        System.out.print("Enter warrior's HP: ");
-        int hp = scanner.nextInt();
-        System.out.println("|-------------------------|");
-        System.out.print("Enter warrior's strength: ");
-        int strength = scanner.nextInt();
-        System.out.println("|-------------------------|");
-        System.out.print("Enter warrior's stamina: ");
-        int stamina = scanner.nextInt();
+        int hp = new Random().nextInt(101) + 100;
+        int strength = new Random().nextInt(10) + 1;
+        int stamina = new Random().nextInt(40) + 10;
         return new Warrior(name, hp, strength, stamina);
     }
+
 
     private static Character createWizard(Scanner scanner) {
         System.out.println("|-----------------------|");
         System.out.print("Enter wizard's name: ");
         String name = scanner.next();
-        System.out.println("|-----------------------|");
-        System.out.print("Enter wizard's HP: ");
-        int hp = scanner.nextInt();
-        System.out.println("|-----------------------|");
-        System.out.print("Enter wizard's mana: ");
-        int mana = scanner.nextInt();
-        System.out.println("|---------------------------|");
-        System.out.print("Enter wizard's intelligence: ");
-        int intelligence = scanner.nextInt();
+        int hp = new Random().nextInt(51) + 50;
+        int mana = new Random().nextInt(20) + 1;
+        int intelligence = new Random().nextInt(30) + 20;
         return new Wizard(name, hp, mana, intelligence);
     }
-
 
     private static void startBattle(Character character1, Character character2) {
         while (character1.isAlive() && character2.isAlive()) {
