@@ -30,12 +30,7 @@ public class BattleSimulator {
                 case 3:
                     if (character1 != null && character2 != null) {
                         startBattle(character1, character2);
-                    }
-                    else if (character1 != null && character1 != null) {
-                        startBattle(character1, character1);
-                    }
-                    else if  (character2 != null && character2 != null) {
-                        startBattle(character2, character2);
+
                     } else {
                         System.out.println("Please create both characters before starting the battle.");
                     }
@@ -92,13 +87,9 @@ public class BattleSimulator {
         }
 
         if (character1.isAlive()) {
-            System.out.println("|--------------------------------------|");
             System.out.println("***"+character1.getName() + " wins the battle!***");
-            System.out.println("|--------------------------------------|");
         } else {
-            System.out.println("|--------------------------------------|");
             System.out.println("***"+character2.getName() + " wins the battle!***");
-            System.out.println("|--------------------------------------|");
 
         }
     }

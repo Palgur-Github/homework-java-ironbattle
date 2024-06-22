@@ -15,8 +15,8 @@ public class Warrior extends Character implements Attacker {
 
     public Warrior(String name, int hp1, int i, int hp) {
         super(name, hp);
-        this.stamina = this.stamina;
-        this.strength = this.strength;
+        this.stamina = stamina;
+        this.strength = strength;
     }
 
     public int getStamina() {

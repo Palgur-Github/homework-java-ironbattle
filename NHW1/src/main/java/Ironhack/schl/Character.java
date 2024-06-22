@@ -55,7 +55,7 @@ public abstract class Character {
     }
 
     public boolean isAlive() {
-        return false;
+        return isAlive;
     }
 
     public void attack(Character character){
